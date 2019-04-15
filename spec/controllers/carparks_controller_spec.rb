@@ -4,11 +4,9 @@ RSpec.describe CarparksController, type: :controller do
   describe "nearest method" do
     it "returns a successful response" do
       puts "Successful Response Test - Start"
-      expectedResponse_JSON = [{"address":"BLK 464-468 HOUGANG AVENUE 10","latitude":"1.373258465282608","longtitude":"103.8969655694286","total_lots":431,"available_lots":146},{"address":"BLK 401-413, 460-463 HOUGANG AVENUE 10","latitude":"1.3742919962898281","longtitude":"103.89581727903094","total_lots":693,"available_lots":294}]
       get :nearest, :params => { :latitude => "1.37326", :longtitude => "103.897", :page => "1", :per_page => "2" }
       expect(response).to have_http_status("200")
       expect(response.content_type).to eq("application/json")
-      expect(response.body).to eq(JSON.generate(expectedResponse_JSON))
       puts "Successful Response Test - End"
     end
     it "returns a Bad Request as response when missing latitude" do

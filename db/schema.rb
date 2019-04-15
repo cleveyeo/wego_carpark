@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_04_13_032726) do
 
-  create_table "carpark_informations", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "carpark_informations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "car_park_no"
     t.string "address"
     t.string "x_coord"
@@ -21,16 +21,10 @@ ActiveRecord::Schema.define(version: 2019_04_13_032726) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "carpark_parking_informations", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "carpark_parking_informations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "carpark_number"
     t.integer "total_lots"
     t.integer "lots_available"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "workers", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
