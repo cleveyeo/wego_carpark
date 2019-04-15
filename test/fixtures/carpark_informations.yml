@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_park_no: MyString
+  address: MyString
+  x_coord: MyString
+  y_coord: MyString
+
+two:
+  car_park_no: MyString
+  address: MyString
+  x_coord: MyString
+  y_coord: MyString

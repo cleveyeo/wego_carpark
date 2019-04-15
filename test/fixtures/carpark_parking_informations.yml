@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  carpark_number: MyString
+  total_lots: 1
+  lots_available: 1
+
+two:
+  carpark_number: MyString
+  total_lots: 1
+  lots_available: 1

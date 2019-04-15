@@ -1,0 +1,2 @@
+class CarparkParkingInformation < ApplicationRecord
+end
