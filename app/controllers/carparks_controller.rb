@@ -32,7 +32,7 @@ class CarparksController < ApplicationController
             end
           end
 
-          #Remove carpark that has data in HDB Carpark API
+          #Remove carpark that has no data in HDB Carpark API
           carparkDetailsList.delete_if {|carparkItem| carparkItem.address.blank?}
 
           if params.has_key?(:page) && params.has_key?(:per_page)
