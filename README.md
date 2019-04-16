@@ -135,6 +135,16 @@ User used will be determine by which user has been specify inside docker-compose
       attributes  :address, :latitude, :longtitude, :total_lots, :available_lots
     end    
     ```
+* Validation of "Page & Per_Page" parameters are in placed as well.
+    * Check if input parameters are of numerical value
+    * Check if numerical value is lesser or equal to '0'
+    * If any of the above condition are met, HTTP status code 400 will be returned
+    ```
+    page_No_Check = Integer(page_No) rescue false
+    paginate_No_Check = Integer(paginate_No) rescue false
+    if !page_No_Check || !paginate_No_Check || page_No_Check <= 0 || paginate_No_Check <= 0
+      head :bad_request
+    ```
 ## 5) Challenges faced during development
 * Working through on the setup & connection for MySQL database at first without 'docker-compose'
 * Developing Rspec test cases after finishing the functionality of application
