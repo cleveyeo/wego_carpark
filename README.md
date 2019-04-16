@@ -79,6 +79,8 @@ User used will be determine by which user has been specify inside docker-compose
 
 "-p" is to specify user's password.
 ## 4) Approach taken 
+* Assumption
+    * Latitude & Longtitude inputted are in usable format without the need for conversion 
 * Downloaded Carpark Information CSV file and developed rake task to load data to database.
     * Convert of latitude & longtitude SVY21 format to more widely used format (Used 'SVY21' API')
         ```
@@ -147,6 +149,7 @@ User used will be determine by which user has been specify inside docker-compose
     ```
 ## 5) Challenges faced during development
 * Working through on the setup & connection for MySQL database at first without 'docker-compose'
+* Setting up & incorporating Rspec into application
 * Developing Rspec test cases after finishing the functionality of application
     * Learnt that there was command to help in generating spec test cases for existing model and controller
 ## 6) Observation & Learning Notes
